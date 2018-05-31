@@ -1,5 +1,6 @@
 import React,{ Component } from 'react';
 import HomeHeader from '../../components/HomeHeader';
+import Category from '../../components/Category';
 
 class Home extends Component{
     constructor(){
@@ -9,6 +10,7 @@ class Home extends Component{
         return(
             <div>
                 <HomeHeader />
+                <Category />
             </div>
         );
     }
