@@ -19,10 +19,13 @@
     "build-css": "node-less-chokidar src/ -o src/",
     "watch-css": "npm run build-css && node-less-chokidar src/ -o src/ --watch --recursive",
     "start-js": "react-scripts start",
-    "start": "npm-run-all -p watch-css start-js",
+    "start": "cross-env MY_API_URL=https://5b165eb0a1c7e300147c8726.mockapi.io npm-run-all -p watch-css start-js",
     "build-js": "react-scripts build",
     "build": "npm-run-all build-css build-js",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
+  },
+  "devDependencies": {
+    "cross-env": "^5.1.6"
   }
 }
