@@ -6,7 +6,7 @@ class HomeAd extends Component {
         return(
             <div id="home-ad">
                 <h2>Huge Sale! </h2>
-                <div calssName="ad-container clear-fix">
+                <div className="ad-container clear-fix">
                     {
                         this.props.data.map((item, index) => {
                             return(
