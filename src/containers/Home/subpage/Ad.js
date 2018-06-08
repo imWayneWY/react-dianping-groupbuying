@@ -34,7 +34,6 @@ class Ad extends Component {
                 error  // error : error 
             })
         )
-        console.log(this.state.data);
     }
 }
 export default Ad;

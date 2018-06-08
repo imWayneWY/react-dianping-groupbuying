@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { getListData } from '../../../fetch/home/home';
-import LoadMore from '../components/LoadMore';
+import LoadMore from '../../../components/LoadMore';
+import ListComponent from '../../../components/List';
 
 class List extends Component{
     constructor(){
@@ -26,7 +27,7 @@ class List extends Component{
                     this.state.hasMore
                     ? <LoadMore 
                         isLoadingMore={this.state.isLoadingMore} 
-                        loadMoreFn={this.loadMoreDate.bind(this)}/>
+                        loadMoreFn={this.loadMoreData.bind(this)}/>
                     : ''
                 }
             </div>
@@ -46,8 +47,8 @@ class List extends Component{
     resultHandle(result) {
         result.then(
             response => this.setState({
-                data: response.data.data,
-                hasMore: response.data.hasMore
+                data: response.data[0].data,
+                hasMore: response.data[0].hasMore
             })
         ).catch(
             error => this.setState({

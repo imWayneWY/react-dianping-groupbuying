@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import { getImage } from '../../utils/getImage';
+
 import './style.css';
 
 class HomeAd extends Component {
@@ -12,7 +14,7 @@ class HomeAd extends Component {
                             return(
                                 <div key={index} className="ad-item float-left">
                                     <a href={item.link} target="_blank">
-                                        <img src={item.img} alt={item.title}/>
+                                        <img src={getImage(item.img)} alt={item.title}/>
                                     </a>
                                 </div>
                             );
