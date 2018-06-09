@@ -16,6 +16,27 @@ class LoadMore extends Component {
     loadMoreHandle() {
         this.props.loadMoreFn();
     }
+    componentDidMount(){
+        const loadMoreFn = this.props.loadMoreFn;
+        const wrapper = this.refs.wrapper;
+        let timeoutId;
+        function callback() {
+            const top = wrapper.getBoundingClientRect().top;
+            const windowHeight = window.screen.height;
+            if(top && top < windowHeight) {
+                loadMoreFn();
+            }
+        };
+        window.addEventListener('scroll',function() {
+            if (this.props.isLoadingMore){
+                return;
+            }
+            if(timeoutId) {
+                clearTimeout(timeoutId);
+            }
+            timeoutId = setTimeout(callback, 50);
+        }.bind(this), false);
+    }
 }
 
 export default LoadMore;

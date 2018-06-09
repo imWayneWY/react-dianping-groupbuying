@@ -47,7 +47,7 @@ class List extends Component{
     resultHandle(result) {
         result.then(
             response => this.setState({
-                data: response.data[0].data,
+                data: this.state.data.concat(response.data[0].data),
                 hasMore: response.data[0].hasMore
             })
         ).catch(
