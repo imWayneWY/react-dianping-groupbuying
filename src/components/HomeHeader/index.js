@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import SearchInput from '../SearchInput';
+import { Link } from 'react-router-dom';
 import './style.css';
 
 class HomeHeader extends Component{
@@ -10,9 +11,11 @@ class HomeHeader extends Component{
         return(
             <div id="home-header" >
                 <div className="home-header-left float-left">
+                    <Link to="/city">
                     <span>Saskaton</span>
                     &nbsp;
                     <i className="icon-angle-down"></i>
+                    </Link>
                 </div>
                 <div className="home-header-right float-right">
                     <i className="icon-user"></i>
