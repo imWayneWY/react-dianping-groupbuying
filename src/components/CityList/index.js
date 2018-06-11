@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import City from '../../containers/City';
+import './style.css';
 
 class CityList extends Component{
     render(){
