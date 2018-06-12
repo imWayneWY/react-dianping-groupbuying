@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import history from '../../history';
 import './style.css';
 
 class CityList extends Component{
@@ -8,18 +9,23 @@ class CityList extends Component{
                 <h3>Hot Cities</h3>
                 <ul className = "clear-fix">
                     <li>
-                        <span>Saskatoon</span>
+                        <span onClick={this.clickHandle.bind(this,'Saskatoon')}>Saskatoon</span>
                     </li>
                     <li>
-                        <span>Montreal</span>
+                        <span onClick={this.clickHandle.bind(this,'Montreal')}>Montreal</span>
                     </li>
                     <li>
-                        <span>Toronto</span>
+                        <span onClick={this.clickHandle.bind(this,'Toronto')}>Toronto</span>
                     </li>
                 </ul>
             </div>
         );
     }
+    clickHandle(cityName){
+        this.props.changeFn(cityName);
+        history.push('/');
+    }
+
 }
 
 export default CityList;

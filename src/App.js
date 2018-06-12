@@ -1,13 +1,14 @@
 import React, { Component } from 'react';
 import './App.css';
-import {HashRouter as Router, Route, Switch} from 'react-router-dom';
+import {Router, Route, Switch} from 'react-router-dom';
 import Home from './containers/Home'; 
 import City from './containers/City';
+import history from './history';
 
 class App extends Component {
   render() {
     return (
-      <Router>
+      <Router history={history}>
         <div className="App">
           <Switch>
             <Route exact path='/' component={Home} />  
