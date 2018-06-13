@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { getListData } from '../../../fetch/home/home';
+import { getListData } from '../../../fetch';
 import LoadMore from '../../../components/LoadMore';
 import ListComponent from '../../../components/List';
 

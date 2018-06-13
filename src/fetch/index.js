@@ -9,3 +9,7 @@ export const getAdData = () =>
 export const getListData = (city, page) =>
     axios.get(`${api}/homeList`)
 //  axios.get(`${api}/homeList/`+city+'/'+page)
+
+export const getSearchData = (page, city, category, keyword) =>
+    axios.get(`${api}/search`)
+//  axios.get(`${api}/search/` + page + '/' + cityName + '/' + category + (keyword? '/' + keyword : ''))

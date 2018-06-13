@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import HomeAd from '../../../components/HomeAd';
-import { getAdData } from '../../../fetch/home/home';
+import { getAdData } from '../../../fetch';
 
 class Ad extends Component {
     constructor(){
