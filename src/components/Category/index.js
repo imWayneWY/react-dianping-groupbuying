@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import ReactSwipe from 'react-swipe';
+import { Link } from 'react-router-dom';
 import './style.css';
 
 class Category extends Component{
@@ -21,44 +22,44 @@ class Category extends Component{
                 <ReactSwipe swipeOptions={opt}>
                     <div className="carousel-item">
                         <ul className="clear-fix">
-                        <li className="float-left jingdian">scenic spot</li>
-                        <li className="float-left ktv">KTV</li>
-                        <li className="float-left gouwu">shopping</li>
-                        <li className="float-left shenghuo">live</li>
-                        <li className="float-left jianshenyundong">sports</li>
-                        <li className="float-left meifa">hairdressing</li>
-                        <li className="float-left qinzi">parents-child</li>
-                        <li className="float-left xiaochikuaican">snack</li>
-                        <li className="float-left zizhucan">buffet</li>
-                        <li className="float-left jiuba">bar</li>
+                        <Link to = "/search/jingdian"><li className="float-left jingdian">scenic spot</li></Link>
+                        <Link to = "/search/ktv"><li className="float-left ktv">KTV</li></Link>
+                        <Link to = "/search/gouwu"><li className="float-left gouwu">shopping</li></Link>
+                        <Link to = "/search/shenghuo"><li className="float-left shenghuo">live</li></Link>
+                        <Link to = "/search/jianshenyundong"><li className="float-left jianshenyundong">sports</li></Link>
+                        <Link to = "/search/meifa"><li className="float-left meifa">hairdressing</li></Link>
+                        <Link to = "/search/qunzi"><li className="float-left qinzi">parents-child</li></Link>
+                        <Link to = "/search/xiaochikuaican"><li className="float-left xiaochikuaican">snack</li></Link>
+                        <Link to = "/search/zizhucan"><li className="float-left zizhucan">buffet</li></Link>
+                        <Link to = "/search/jiuba"><li className="float-left jiuba">bar</li></Link>
                         </ul>
                     </div>
                 <div className="carousel-item">
                         <ul className="clear-fix">
-                        <li className="float-left meishi">cate</li>
-                        <li className="float-left dianying">movie</li>
-                        <li className="float-left jiudian">hotel</li>
-                        <li className="float-left xiuxianyule">entertainment</li>
-                        <li className="float-left waimai">take-out</li>
-                        <li className="float-left huoguo">hot-pot</li>
-                        <li className="float-left liren">beauty</li>
-                        <li className="float-left dujiachuxing">holiday</li>
-                        <li className="float-left zuliaoanmo">massage</li>
-                        <li className="float-left zhoubianyou">travel nearby</li>
+                        <Link to = "/search/meishi"><li className="float-left meishi">cate</li></Link>
+                        <Link to = "/search/dianying"><li className="float-left dianying">movie</li></Link>
+                        <Link to = "/search/jiudian"><li className="float-left jiudian">hotel</li></Link>
+                        <Link to = "/search/xiuxianyule"><li className="float-left xiuxianyule">entertainment</li></Link>
+                        <Link to = "/search/waimai"><li className="float-left waimai">take-out</li></Link>
+                        <Link to = "/search/huoguo"><li className="float-left huoguo">hot-pot</li></Link>
+                        <Link to = "/search/liren"><li className="float-left liren">beauty</li></Link>
+                        <Link to = "/search/dujiachuxing"><li className="float-left dujiachuxing">holiday</li></Link>
+                        <Link to = "/search/zuliaoanmo"><li className="float-left zuliaoanmo">massage</li></Link>
+                        <Link to = "/search/zhoubianyou"><li className="float-left zhoubianyou">travel nearby</li></Link>
                         </ul>
                     </div>
                 <div className="carousel-item">
                         <ul className="clear-fix">
-                        <li className="float-left ribencai">Japanese cuisine</li>
-                        <li className="float-left SPA">SPA</li>
-                        <li className="float-left jiehun">marriage</li>
-                        <li className="float-left xuexipeixun">training</li>
-                        <li className="float-left xican">restaurant</li>
-                        <li className="float-left huochejipiao">travel tickets</li>
-                        <li className="float-left shaokao">BBQ</li>
-                        <li className="float-left jiazhuang">furnishing</li>
-                        <li className="float-left chongwu">pet</li>
-                        <li className="float-left quanbufenlei">all category</li>
+                        <Link to = "/search/ribencai"><li className="float-left ribencai">Japanese cuisine</li></Link>
+                        <Link to = "/search/SPA"><li className="float-left SPA">SPA</li></Link>
+                        <Link to = "/search/jiehun"><li className="float-left jiehun">marriage</li></Link>
+                        <Link to = "/search/xuexipeixun"><li className="float-left xuexipeixun">training</li></Link>
+                        <Link to = "/search/xican"><li className="float-left xican">restaurant</li></Link>
+                        <Link to = "/search/huochejipiao"><li className="float-left huochejipiao">travel tickets</li></Link>
+                        <Link to = "/search/shaokao"><li className="float-left shaokao">BBQ</li></Link>
+                        <Link to = "/search/jiazhuang"><li className="float-left jiazhuang">furnishing</li></Link>
+                        <Link to = "/search/chongwu"><li className="float-left chongwu">pet</li></Link>
+                        <Link to = "/search/quanbufenlei"><li className="float-left quanbufenlei">all category</li></Link>
                         </ul>
                     </div>
                 </ReactSwipe>

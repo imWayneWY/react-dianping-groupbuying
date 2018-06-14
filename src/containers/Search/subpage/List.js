@@ -90,6 +90,11 @@ class SearchList extends Component{
 
        this.loadFirstPageData();
    }
+   componentWillUnmount(){
+        this.setState = (state,callback) => {
+            return;
+        };
+   }
 }
 
 function mapStateToProps(state) {

@@ -9,7 +9,7 @@ class Ad extends Component {
             data: [],
             isLoaded: false,
             error: null
-        }
+        };
     }
     render() {
         return(
@@ -34,6 +34,11 @@ class Ad extends Component {
                 error  // error : error 
             })
         )
+    }
+    componentWillUnmount(){
+        this.setState = (state,callback) => {
+            return;
+        };
     }
 }
 export default Ad;

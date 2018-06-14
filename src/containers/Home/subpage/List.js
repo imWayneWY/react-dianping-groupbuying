@@ -69,6 +69,11 @@ class List extends Component{
             isLoadingMore: false
         })
     }
+    componentWillUnmount(){
+        this.setState = (state,callback) => {
+            return;
+        };
+    }
 }
 
 export default List;

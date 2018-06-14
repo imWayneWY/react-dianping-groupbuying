@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import SearchInput from '../SearchInput';
 import { Link } from 'react-router-dom';
+import history from '../../history';
 import './style.css';
 
 class HomeHeader extends Component{
@@ -24,11 +25,14 @@ class HomeHeader extends Component{
                     <div className="search-container">
                         <i className="icon-search"></i>
                         &nbsp;
-                        <SearchInput value=""/>
+                        <SearchInput value="" enterHandle={this.enterHandle.bind(this)}/>
                     </div>
                 </div>
             </div>  
         );
+    }
+    enterHandle(value){
+        history.push('/search/all/'+encodeURIComponent(value));
     }
 }
 
