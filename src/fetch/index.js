@@ -13,3 +13,11 @@ export const getListData = (city, page) =>
 export const getSearchData = (page, city, category, keyword) =>
     axios.get(`${api}/search`)
 //  axios.get(`${api}/search/` + page + '/' + cityName + '/' + category + (keyword? '/' + keyword : ''))
+
+export const getInfoData = (id) =>
+    axios.get(`${api}/info/`)
+//  axios.get(`${api}/detail/info/`+id)
+
+export const getCommentData = (id,page) =>
+    axios.get(`${api}/comment`)
+//  axios.get(`${api}/detail/comment/`+id+'/'+page)

@@ -44,13 +44,11 @@ class SearchList extends Component{
     }
     resultHandle(result) {
         const page = this.state.page;
-        this.setState({
-            page: page + 1
-        });
         result.then(
            response => this.setState({
                data: this.state.data.concat(response.data[0].data),
-               hasMore: response.data[0].hasMore
+               hasMore: response.data[0].hasMore,
+               page: this.state.page+1
            })
         ).catch(
             error => this.setState({
