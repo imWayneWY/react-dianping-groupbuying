@@ -25,7 +25,7 @@ class SearchInput extends Component{
         })
     }
     keyUpHandle(e){
-        if(e.keyCode != 13){
+        if(e.keyCode !== 13){
             return
         }
         this.props.enterHandle(e.target.value);

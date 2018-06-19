@@ -47,8 +47,7 @@ class SearchList extends Component{
         result.then(
            response => this.setState({
                data: this.state.data.concat(response.data[0].data),
-               hasMore: response.data[0].hasMore,
-               page: this.state.page+1
+               hasMore: response.data[0].hasMore
            })
         ).catch(
             error => this.setState({

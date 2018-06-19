@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { getImage } from '../../../utils/getImage';
+import { Link } from 'react-router-dom';
 import './style.css';
 
 class ListItem extends Component {
@@ -7,6 +8,7 @@ class ListItem extends Component {
         const data = this.props.data;
         return(
             <div className="list-item clear-fix">
+                <Link to = {`/detail/${data.id}`}>
                 <div className="item-img-container float-left">
                     <img src={getImage(data.img)} alt={data.title} />
                 </div>
@@ -23,6 +25,7 @@ class ListItem extends Component {
                         <span className="mumber float-right">{data.mumber} have been sold</span>
                     </div>
                 </div>
+                </Link>
             </div>
         );
     }

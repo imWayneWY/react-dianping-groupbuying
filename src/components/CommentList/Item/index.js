@@ -6,7 +6,7 @@ class CommentItem extends Component{
         const item = this.props.data;
 
         return(
-            <div classNmae="comment-item">
+            <div className="comment-item">
                 <h3>
                     <i className="icon-user"></i>
                     &nbsp;
