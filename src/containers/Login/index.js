@@ -42,10 +42,11 @@ class Login extends Component{
         history.push('/');
     }
     loginHandle(data){
-        this.props.dispatchUserUpdat(data);
+        this.props.dispatchUserUpdate(data);
         const router = this.props.match.params.router;
+        console.log(router)
         if(router){
-            history.push(router);
+            history.push(decodeURIComponent(router));
         } else {
             this.goUserPage();
         }
@@ -60,7 +61,7 @@ function mapStateToProps(state){
 
 function mapDispatchToProps(dispatch){
     return {
-        dispatchUserUpdat: (data) => {dispatch(userUpdate(data))}
+        dispatchUserUpdate: (data) => {dispatch(userUpdate(data))}
     }
 }
 export default connect(
