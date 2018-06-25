@@ -14,14 +14,13 @@ class Header extends Component{
         );
     }
     clickHandle(){
-/*      const backRouter = this.props.backRouter;
+        const backRouter = this.props.backRouter;
         if(backRouter) {
-            history.push(history);
+            history.push(backRouter);
         } else {
             window.history.back();
         }
- */
-        history.goBack();
+ 
     }
 
 

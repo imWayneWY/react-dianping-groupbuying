@@ -6,6 +6,7 @@ import City from './containers/City';
 import Search from './containers/Search';
 import Detail from './containers/Detail';
 import Login from './containers/Login';
+import User from './containers/User';
 
 import history from './history';
 
@@ -20,6 +21,7 @@ class App extends Component {
             <Route path='/search/:category/:keyword?' component={Search}/>
             <Route path='/detail/:id' component={Detail}/>
             <Route path='/login/:router?' component={Login}/>
+            <Route path='/user' component={User}/>
           </Switch>
         </div>
       </Router>

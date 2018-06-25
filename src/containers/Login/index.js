@@ -39,12 +39,11 @@ class Login extends Component{
         }
     }
     goUserPage(){
-        history.push('/');
+        history.push('/user');
     }
     loginHandle(data){
         this.props.dispatchUserUpdate(data);
         const router = this.props.match.params.router;
-        console.log(router)
         if(router){
             history.push(decodeURIComponent(router));
         } else {

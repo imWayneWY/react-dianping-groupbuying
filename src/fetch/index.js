@@ -21,3 +21,7 @@ export const getInfoData = (id) =>
 export const getCommentData = (id,page) =>
     axios.get(`${api}/comment`)
 //  axios.get(`${api}/detail/comment/`+id+'/'+page)
+
+export const getOrderListData = (userName) =>
+//  axios.get(`${api}/`+userName+'/orderList')
+    axios.get(`${api}/orderList`)
