@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { getOrderListData } from '../../../fetch';
+import { getOrderListData, postComment} from '../../../fetch';
 import OrderListComponent from '../../../components/OrderList';
 import './style.css';
 
@@ -18,7 +18,10 @@ class OrderList extends Component{
                 <h2>Your Order</h2>
                 {
                     this.state.data.length
-                    ? <OrderListComponent data={this.state.data}/>
+                    ? <OrderListComponent 
+                        userName={this.props.userName} 
+                        data={this.state.data} 
+                        submitComment={this.submitComment.bind(this)}/>
                     : <div>{/* Loading */}</div>
                 }
             </div>
@@ -43,6 +46,24 @@ class OrderList extends Component{
                 this.setState({
                     error,
                     isLoad: true
+                })
+            }
+        )
+    }
+    submitComment(id,value,star,callback){
+        const userName = this.props.userName;
+        const comment = {
+            id: id,
+            submitCommentId: userName,
+            value: value,
+            star: star
+        }
+        postComment(userName,comment).then(
+            response=>{callback();}
+        ).catch(
+            error=>{
+                this.setState({
+                    error
                 })
             }
         )

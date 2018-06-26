@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Star from '../../Star';
 import './style.css';
 
 class CommentItem extends Component{
@@ -12,6 +13,7 @@ class CommentItem extends Component{
                     &nbsp;
                     {item.username}
                 </h3>
+                <Star star={item.star}/>
                 <p>{item.comment}</p>
             </div>
         );

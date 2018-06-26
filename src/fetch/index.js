@@ -25,3 +25,9 @@ export const getCommentData = (id,page) =>
 export const getOrderListData = (userName) =>
 //  axios.get(`${api}/`+userName+'/orderList')
     axios.get(`${api}/orderList`)
+
+export const postComment = (userName,body) => 
+    axios.post(`${api}/submitComment/`+userName+'/commentValue',body)
+
+export const updateOrderList = (userName,id,body) => 
+    axios.put(`${api}/orderList/${id}`, body)

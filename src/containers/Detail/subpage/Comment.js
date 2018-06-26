@@ -59,9 +59,9 @@ class Comment extends Component{
             isLoadingMore: true,
             page: this.state.page+1
         });
-
         const id = this.props.id;
         const result = getCommentData(id,this.state.page);
+        this.resultHandle(result);
 
         this.setState({
             isLoadingMore: false

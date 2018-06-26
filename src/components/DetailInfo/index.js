@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import {getImage} from '../../utils/getImage'
+import {getImage} from '../../utils/getImage';
+import Star from '../Star';
 import './style.css';
 
 class DetailInfo extends Component{
@@ -15,6 +16,7 @@ class DetailInfo extends Component{
                         <div className="info-content">
                             <h1>{data.title}</h1>
                             <div className="star-container">
+                                <Star star={data.star} />
                                 <span className="price">{data.price}CDN</span>
                             </div>
                             <p className="sub-title">{data.subTitle}</p>
