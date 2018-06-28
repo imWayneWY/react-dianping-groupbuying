@@ -7,6 +7,7 @@ import Search from './containers/Search';
 import Detail from './containers/Detail';
 import Login from './containers/Login';
 import User from './containers/User';
+import NotFound from './containers/404.js';
 
 import history from './history';
 
@@ -22,6 +23,7 @@ class App extends Component {
             <Route path='/detail/:id' component={Detail}/>
             <Route path='/login/:router?' component={Login}/>
             <Route path='/user' component={User}/>
+            <Route path='*' component={NotFound}/>
           </Switch>
         </div>
       </Router>
