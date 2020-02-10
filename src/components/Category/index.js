@@ -45,17 +45,17 @@ class Category extends Component{
                         <Link to = "/search/liren"><li className="float-left liren">beauty</li></Link>
                         <Link to = "/search/dujiachuxing"><li className="float-left dujiachuxing">holiday</li></Link>
                         <Link to = "/search/zuliaoanmo"><li className="float-left zuliaoanmo">massage</li></Link>
-                        <Link to = "/search/zhoubianyou"><li className="float-left zhoubianyou">travel nearby</li></Link>
+                        <Link to = "/search/zhoubianyou"><li className="float-left zhoubianyou">nearby trip</li></Link>
                         </ul>
                     </div>
                 <div className="carousel-item">
                         <ul className="clear-fix">
-                        <Link to = "/search/ribencai"><li className="float-left ribencai">Japanese cuisine</li></Link>
+                        <Link to = "/search/ribencai"><li className="float-left ribencai">cuisine</li></Link>
                         <Link to = "/search/SPA"><li className="float-left SPA">SPA</li></Link>
                         <Link to = "/search/jiehun"><li className="float-left jiehun">marriage</li></Link>
                         <Link to = "/search/xuexipeixun"><li className="float-left xuexipeixun">training</li></Link>
                         <Link to = "/search/xican"><li className="float-left xican">restaurant</li></Link>
-                        <Link to = "/search/huochejipiao"><li className="float-left huochejipiao">travel tickets</li></Link>
+                        <Link to = "/search/huochejipiao"><li className="float-left huochejipiao">travel</li></Link>
                         <Link to = "/search/shaokao"><li className="float-left shaokao">BBQ</li></Link>
                         <Link to = "/search/jiazhuang"><li className="float-left jiazhuang">furnishing</li></Link>
                         <Link to = "/search/chongwu"><li className="float-left chongwu">pet</li></Link>
